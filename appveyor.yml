@@ -39,7 +39,7 @@ build_script:
  /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" 
  /d:sonar.coverage.exclusions="TesteBackendAcesso.Tests/**,**/*Tests.cs" 
  /d:sonar.cs.opencover.reportsPaths="$env:CD\Tests\TesteBackendAcesso.Tests\coverage.opencover.xml" }'
- - dotnet build
+ - dotnet build TesteBackendAcesso.sln
  - ps: dotnet test .\Tests\TesteBackendAcesso.Tests\TesteBackendAcesso.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
  - ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { & dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN" }'
  - codecov -f "Tests\TesteBackendAcesso.Tests\coverage.opencover.xml"

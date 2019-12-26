@@ -1,3 +1,7 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/98iy10na6hfmd76p?svg=true)](https://ci.appveyor.com/project/guibranco/test-backend)
+
+
+
 # Teste Técnico - BackEnd #VemSerAcesso
 
 Olá 😊
