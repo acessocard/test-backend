@@ -1,0 +1,45 @@
+version: 1.0.{build}
+pull_requests:
+ do_not_increment_build_number: true
+skip_tags: true
+image: Visual Studio 2017
+configuration: Release
+skip_commits:
+  message: /(Created|Update).*\.(png|jpg|jpeg|bmp|gif|md)/
+skip_branch_with_pr: true
+environment:
+  SONAR_TOKEN: 
+    secure: vXtSbp23uUC+FWFFgeE9EU9LHDPAOWFWplrXQJ0s5W+AlrC1L3eMpHluGMfxgHaU
+dotnet_csproj: 
+  patch: true 
+  file: '**\*.csproj' 
+  version: '1.0.{build}' 
+  package_version: '1.0.{build}' 
+  assembly_version: '1.0.{build}'
+  file_version: '1.0.{build}'
+  informational_version: '1.0.{build}'
+before_build:
+- cmd: nuget restore
+- cmd: choco install opencover.portable
+- cmd: choco install codecov
+build:
+  publish_nuget: true
+  include_nuget_references: true
+  parallel: true
+  verbosity: normal
+build_script:
+ - dotnet tool install --global dotnet-sonarscanner
+ - ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { & 
+  dotnet sonarscanner begin 
+ /k:"guibranco_test-backend" 
+ /o:"guibranco-github" 
+ /d:sonar.host.url="https://sonarcloud.io" 
+ /d:sonar.login="$env:SONAR_TOKEN" 
+ /v:"$env:APPVEYOR_BUILD_NUMBER" 
+ /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" 
+ /d:sonar.coverage.exclusions="TesteBackendAcesso.Tests/**,**/*Tests.cs" 
+ /d:sonar.cs.opencover.reportsPaths="$env:CD\Tests\TesteBackendAcesso.Tests\coverage.opencover.xml" }'
+ - dotnet build TesteBackendAcesso.sln
+ - ps: dotnet test .\Tests\TesteBackendAcesso.Tests\TesteBackendAcesso.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat="opencover"
+ - ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { & dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN" }'
+ - codecov -f "Tests\TesteBackendAcesso.Tests\coverage.opencover.xml"

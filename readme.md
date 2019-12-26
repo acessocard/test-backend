@@ -1,3 +1,15 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/98iy10na6hfmd76p?svg=true)](https://ci.appveyor.com/project/guibranco/test-backend)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=alert_status)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=bugs)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=code_smells)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=coverage)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=ncloc)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=security_rating)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=sqale_index)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=guibranco_test-backend&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=guibranco_test-backend)
+
+
 # Teste Técnico - BackEnd #VemSerAcesso
 
 Olá 😊
