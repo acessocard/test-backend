@@ -7,9 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="xunit" Version="2.4.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\TesteBackendAcesso.Commands\TesteBackendAcesso.Commands.csproj" />
+    <ProjectReference Include="..\..\Src\TesteBackendAcesso.Domain\TesteBackendAcesso.Domain.csproj" />
+    <ProjectReference Include="..\..\Src\TesteBackendAcesso.Infrastructure\TesteBackendAcesso.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Src\TesteBackendAcesso.Integrations\TesteBackendAcesso.Integrations.csproj" />
+    <ProjectReference Include="..\..\Src\TesteBackendAcesso.Queries\TesteBackendAcesso.Queries.csproj" />
+    <ProjectReference Include="..\..\Src\TesteBackendAcesso.Workers\TesteBackendAcesso.Workers.csproj" />
   </ItemGroup>
 
 </Project>

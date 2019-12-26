@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TesteBackendAcesso.Integrations
+﻿namespace TesteBackendAcesso.Integrations
 {
     public class Class1
     {

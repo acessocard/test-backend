@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TesteBackendAcesso.Queries
+﻿namespace TesteBackendAcesso.Queries
 {
     public class Class1
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TesteBackendAcesso.Commands
+﻿namespace TesteBackendAcesso.Commands
 {
     public class Class1
     {

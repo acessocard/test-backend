@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TesteBackendAcesso.Domain
+﻿namespace TesteBackendAcesso.Domain
 {
     public class Class1
     {
