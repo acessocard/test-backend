@@ -9,7 +9,7 @@ skip_commits:
 skip_branch_with_pr: true
 environment:
   SONAR_TOKEN: 
-    secure: vXtSbp23uUC+FWFFgeE9EU9LHDPAOWFWplrXQJ0s5W+TtvlC+lxE0WQ2FS39PrKS
+    secure: vXtSbp23uUC+FWFFgeE9EU9LHDPAOWFWplrXQJ0s5W+AlrC1L3eMpHluGMfxgHaU
 dotnet_csproj: 
   patch: true 
   file: '**\*.csproj' 
