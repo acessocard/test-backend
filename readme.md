@@ -30,7 +30,7 @@ Os payloads de request e response estão descritos abaixo.
 
 ## Payloads
 
-##### Request Transferencia
+### Request Transferencia
 
 **POST api/fund-transfer**
 
@@ -42,19 +42,21 @@ Os payloads de request e response estão descritos abaixo.
 }
 ```
 
-##### Response Transferencia
+### Response Transferencia
 ```
 {
     "transactionId": "d4a5bc48-3e01-4ee4-aed4-7007325e738e"
 }
 ```
 
-##### Request Status
+---
+
+### Request Status
 
 **GET api/fund-transfer/{{transactionId}}**
 
 
-##### Response Status
+### Response Status
 ```
 {
     "Status": "Confirmed"
