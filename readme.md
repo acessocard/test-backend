@@ -89,6 +89,10 @@ Você precisará desta API para desenvolver o nosso teste. Boa sorte 😉
 
 Essa API pode ser encontrada no [Docker Hub](https://hub.docker.com/r/baldini/testacesso) ou no [Heroku](https://acessoaccount.herokuapp.com/swagger/index.html)
 
+```
+docker run -d -p 5000:80 baldini/testacesso
+```
+
 Acessando a url /swagger você consegue acesso a documentação.
 
 Essa API tem intermitências como tempo de reposta alto e em alguns momentos do dia ela fica indisponivel :dizzy_face:
